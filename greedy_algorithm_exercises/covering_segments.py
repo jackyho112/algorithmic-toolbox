@@ -5,7 +5,7 @@ from collections import namedtuple
 Segment = namedtuple('Segment', 'start end')
 
 def optimal_points(segments):
-    segments.sort(key=lambda x: int(str(x[0]) + str(x[1])))
+    segments.sort(key=lambda x: x[1])
     points = [segments[0][1]]
     reached = 0
     current_segment = segments[0]

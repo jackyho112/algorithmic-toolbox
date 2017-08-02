@@ -6,14 +6,8 @@ def is_greater_or_equal(a, b):
     str_a = str(a)
     str_b = str(b)
 
-    if str_a[0] > str_b[0]:
+    if (str_a + str_b) > (str_b + str_a):
         return 1
-    elif len(str_a) == len(str_b) and a > b:
-        return 1
-    elif str_a[0] == str_b[0] and len(str_a) < len(str_b):
-        return 1
-    elif len(str_a) == len(str_b) and a == b:
-        return 0
 
     return -1
 
