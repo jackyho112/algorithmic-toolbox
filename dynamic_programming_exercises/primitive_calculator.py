@@ -28,13 +28,12 @@ def optimal_sequence(target):
         trees.append(level_nums)
         level += 1
 
-        if number_reached == 1:
-            num = item[1]
-            while level:
-                sequence.append(num)
-                level -= 1
-                item = trees[level][item[0]]
-                num = item[1]
+    num = item[1]
+    while level:
+        sequence.append(num)
+        level -= 1
+        item = trees[level][item[0]]
+        num = item[1]
 
     sequence.append(target)
 
